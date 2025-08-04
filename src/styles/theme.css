@@ -1,0 +1,212 @@
+body, html, .vortex-root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #0e1013;
+  color: #e5e7ef;
+}
+.vortex-root {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% 30%, #181c23 60%, #0e1013 100%);
+  transition: background 1s;
+}
+.setup-screen {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(120deg, #181c23 60%, #0e1013 100%);
+}
+.setup-card {
+  background: rgba(24,28,35,0.97);
+  box-shadow: 0 8px 40px #000c 0;
+  border-radius: 12px;
+  padding: 3rem 2.5rem;
+  width: 350px;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 1.5rem;
+}
+.vortex-logo {
+  font-weight: bold;
+  color: #3ff6f8;
+  text-shadow: 0 0 16px #1ee5f7;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+.setup-input {
+  background: #20242b;
+  color: #d0faff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  width: 100%;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.setup-btn {
+  background: linear-gradient(90deg, #1ee5f7, #3ff6f8 60%, #1ee5f7 100%);
+  color: #161b24;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.6rem 2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #1ee5f744;
+  transition: filter .15s;
+}
+.setup-btn:disabled {
+  filter: grayscale(.7) brightness(.4);
+  cursor: not-allowed;
+}
+.desktop-bg {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: radial-gradient(ellipse at 60% 40%, #181c23 60%, #0e1013 100%);
+  overflow: hidden;
+}
+.window-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.window {
+  position: absolute;
+  left: 8vw; top: 13vh;
+  min-width: 350px;
+  min-height: 250px;
+  max-width: 90vw;
+  max-height: 82vh;
+  background: rgba(28,32,43,0.96);
+  box-shadow: 0 8px 40px #000b;
+  border-radius: 14px;
+  overflow: hidden;
+  pointer-events: auto;
+  z-index: 2;
+  backdrop-filter: blur(7px) saturate(1.1);
+  border: 1.5px solid #23263c99;
+}
+.window-titlebar {
+  background: linear-gradient(90deg, #202532 80%, #181c23 100%);
+  color: #3ff6f8;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1.5px solid #23263c99;
+  user-select: none;
+}
+.window-close {
+  background: none;
+  color: #e34b76;
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+  padding: 0 0.6rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.window-close:hover { background: #3ff6f830; }
+.window-content {
+  padding: 1rem 1.2rem 1.2rem 1.2rem;
+  height: 340px;
+  max-height: 60vh;
+  overflow: auto;
+}
+.taskbar {
+  position: absolute; left: 0; bottom: 0; width: 100vw;
+  height: 54px;
+  background: rgba(22,25,31,0.98);
+  border-top: 1.5px solid #23263c99;
+  display: flex; align-items: center; justify-content: space-between;
+  z-index: 10;
+  box-shadow: 0 -2px 16px #000a;
+  padding: 0 2.5vw;
+}
+.taskbar-logo {
+  font-size: 1.3rem;
+  color: #3ff6f8;
+  font-weight: 700;
+  text-shadow: 0 0 7px #1ee5f799;
+  letter-spacing: 2px;
+}
+.taskbar-apps {
+  display: flex; gap: 1.3vw;
+}
+.taskbar-btn {
+  background: none;
+  border: none;
+  color: #d0faff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: 7px;
+  padding: 0.3rem 0.6rem;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-shadow: 0 0 0 #1ee5f700;
+}
+.taskbar-btn:hover {
+  background: #1ee5f733;
+  box-shadow: 0 0 12px #1ee5f799;
+}
+.browser-app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.browser-nav {
+  display: flex; align-items: center;
+  margin-bottom: 6px;
+}
+.browser-url {
+  background: #161a22;
+  color: #d0faff;
+  border: none;
+  border-radius: 7px 0 0 7px;
+  padding: 0.45rem 1rem;
+  font-size: 1rem;
+  flex: 1;
+}
+.browser-gobtn {
+  background: linear-gradient(90deg, #1ee5f7, #3ff6f8 60%, #1ee5f7 100%);
+  color: #181c23;
+  border: none;
+  border-radius: 0 7px 7px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.45rem 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #1ee5f722;
+}
+.browser-iframe {
+  flex: 1;
+  width: 100%;
+  min-height: 200px;
+  border: none;
+  background: #12151c;
+  border-radius: 7px;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 20px #0005;
+}
+.notes-app {
+  width: 100%;
+  min-height: 200px;
+  background: #161a22;
+  color: #f1f5fa;
+  border: none;
+  border-radius: 7px;
+  padding: 1rem;
+  font-size: 1.05rem;
+  resize: vertical;
+  box-shadow: 0 1.5px 12px #1ee5f722;
+}
+.settings-app {
+  color: #3ff6f8;
+  font-size: 1.12rem;
+  padding: 0.8rem;
+}
+::-webkit-scrollbar {
+  width: 8px; background: #181c23;
+}
+::-webkit-scrollbar-thumb {
+  background: #1ee5f799; border-radius: 8px;
+}
